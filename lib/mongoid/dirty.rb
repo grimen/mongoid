@@ -102,7 +102,10 @@ module Mongoid #:nodoc:
     def attribute_will_change!(attr)
       unless changed_attributes.include?(attr)
         value = read_attribute(attr)
-        value = value.duplicable? ? value.clone : value
+        # REVIEW: ActiveModel trying to call #initialize_copy on Regexp litteral which isn't allowed.
+        unless value.is_a?(::Regexp)
+          value = value.duplicable? ? value.clone : value
+        end
         changed_attributes[attr] = value
       end
     end
