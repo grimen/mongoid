@@ -23,6 +23,7 @@ require "mongoid/fields/serializable/string"
 require "mongoid/fields/serializable/symbol"
 require "mongoid/fields/serializable/time"
 require "mongoid/fields/serializable/time_with_zone"
+require "mongoid/fields/serializable/regexp"
 require "mongoid/fields/serializable/foreign_keys/array"
 require "mongoid/fields/serializable/foreign_keys/object"
 
