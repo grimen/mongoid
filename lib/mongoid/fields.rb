@@ -25,6 +25,7 @@ require "mongoid/fields/internal/symbol"
 require "mongoid/fields/internal/time"
 require "mongoid/fields/internal/time_with_zone"
 require "mongoid/fields/internal/true_class"
+require "mongoid/fields/internal/regexp"
 require "mongoid/fields/internal/foreign_keys/array"
 require "mongoid/fields/internal/foreign_keys/object"
 
